@@ -11,6 +11,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { useColorScheme } from 'react-native';
 import LoginScreen from '@/components/LoginScreen';
 import ContactsScreen from '@/components/ContactsScreen';
+import SearchContactsScreen from '@/components/SearchContactsScreen';
 import MapScreen from '@/components/MapScreen';
 import { getToken, getUser } from '@/utils/storage';
 import { navigationRef } from './navigationRef';
@@ -53,6 +54,7 @@ function AppNavigator() {
         initialRouteName={isAuthenticated ? 'Contacts' : 'Login'}>
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Contacts" component={ContactsScreen} />
+        <Stack.Screen name="SearchContacts" component={SearchContactsScreen} />
         <Stack.Screen name="Map" component={MapScreen} />
       </Stack.Navigator>
     </NavigationContainer>

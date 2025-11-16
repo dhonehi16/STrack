@@ -5,12 +5,23 @@ import { navigateToLogin } from '@/navigation/navigationRef';
 const getBaseUrl = () => {
   if (__DEV__) {
     if (Platform.OS === 'android') {
-      return 'http://10.0.2.2:8000';
+      return 'http://62.183.96.93:8000';
     } else {
-      return 'http://localhost:8000';
+      return 'http://62.183.96.93:8000';
     }
   }
-  return 'https://your-api-url.com';
+  return 'http://62.183.96.93:8000';
+};
+
+export const getWebSocketBaseUrl = (): string => {
+  if (__DEV__) {
+    if (Platform.OS === 'android') {
+      return 'ws://62.183.96.93:8000/ws';
+    } else {
+      return 'ws://62.183.96.93:8000/ws';
+    }
+  }
+  return 'ws://62.183.96.93:8000/ws';
 };
 
 export const getAuthHeaders = async (): Promise<Record<string, string>> => {
@@ -59,8 +70,6 @@ export const authorizedFetch = async (
 ): Promise<Response> => {
   const headers = await getAuthHeaders();
 
-  console.log(`${getBaseUrl()}${url}`)
-  
   const response = await fetch(`${getBaseUrl()}${url}`, {
     ...options,
     headers: {

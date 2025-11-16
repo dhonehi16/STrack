@@ -21,6 +21,19 @@ export const ContactsScreenStyles = (isDarkMode: boolean) =>
       fontWeight: 'bold',
       color: isDarkMode ? '#fff' : '#000',
     },
+    headerButtons: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: 12,
+    },
+    searchButton: {
+      padding: 8,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    searchButtonText: {
+      fontSize: 24,
+    },
     logoutButton: {
       paddingHorizontal: 16,
       paddingVertical: 8,
@@ -119,6 +132,70 @@ export const ContactsScreenStyles = (isDarkMode: boolean) =>
       },
       shadowOpacity: 0.25,
       shadowRadius: 3.84,
+    },
+    shareLocationButtonActive: {
+      backgroundColor: '#FF3B30',
+    },
+    modalOverlay: {
+      flex: 1,
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    modalContent: {
+      backgroundColor: '#fff',
+      borderRadius: 16,
+      padding: 24,
+      width: '80%',
+      maxWidth: 320,
+      alignItems: 'center',
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
+    },
+    modalContentDark: {
+      backgroundColor: '#1a1a1a',
+    },
+    modalTitle: {
+      fontSize: 20,
+      fontWeight: '700',
+      color: '#000',
+      marginBottom: 12,
+      textAlign: 'center',
+    },
+    modalTitleDark: {
+      color: '#fff',
+    },
+    modalText: {
+      fontSize: 16,
+      color: '#666',
+      textAlign: 'center',
+      marginBottom: 24,
+      lineHeight: 22,
+    },
+    modalTextDark: {
+      color: '#aaa',
+    },
+    modalButton: {
+      backgroundColor: '#007AFF',
+      paddingHorizontal: 32,
+      paddingVertical: 12,
+      borderRadius: 8,
+      minWidth: 120,
+    },
+    modalButtonDark: {
+      backgroundColor: '#0A84FF',
+    },
+    modalButtonText: {
+      color: '#fff',
+      fontSize: 16,
+      fontWeight: '600',
+      textAlign: 'center',
     },
   });
 
